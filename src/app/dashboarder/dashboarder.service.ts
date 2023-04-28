@@ -11,7 +11,7 @@ export class DashboarderService {
     constructor(private _httpService: HttpClient){}
 
     getVideoData(url : string): Observable<YoutubeData> {
-        return this._httpService.post("http://localhost:8080/dashboardapi/api/data?url="+url, {url: ""})
+        return this._httpService.post("https://dashboard-restapi.azurewebsites.net/api/data?url="+url, {url: ""})
         .pipe(
             map((response: any) => {
               // Parse the response and return a YoutubeData object
