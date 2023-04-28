@@ -14,6 +14,7 @@ form input{
     margin-bottom: 2%;
 }
 #url{
+    font-size: 85%;
     width: 80%;
     padding: 2%;
     border-radius: 15px 0px 0px 15px;
@@ -23,6 +24,7 @@ form input{
 }
 
 #search{
+    font-size: 85%;
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.23);
     padding: 2%;
     border: 0;  
@@ -52,6 +54,7 @@ form input{
     background-color: rgb(62, 103, 43);
 }
 .dashboard h1{
+    font-size: 200%;
     text-align: center;
     width: 90%;
     margin-bottom: 0;
@@ -91,6 +94,7 @@ form input{
 
 .channel{
     width: 90%;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -101,7 +105,6 @@ form input{
 }
 .channel .channel-data{
     border-radius: 15px;
-    left: 0;
     width: 47%;
 }
 .channel .channel-data p{
@@ -132,4 +135,50 @@ form input{
 .channel .graph canvas{
     margin-left: auto;
     margin-right: auto;
+}
+
+@media only screen and (max-width: 1366px) {
+
+    form{
+        border-radius: 10.6px;
+    }
+
+    #url{
+        font-size: 60.5%;
+        border-radius: 10.6px 0px 0px 10.6px;
+    }
+
+    #search{
+        font-size: 60.5%;
+        border-radius: 0px 10.6px 10.6px 0px;
+    }
+
+    .dashboard h1{
+        border-radius: 10.6px;
+        font-size: 142%;
+    }
+
+    .statistics p{
+        border-radius: 10.6px;
+        font-size: 16.3px;
+        padding: 3.5px;
+    }
+
+    .channel .channel-data p{
+        border-radius: 10.6px;
+        font-size: 16.3px;
+        padding: 3.5px;
+        margin-bottom: 7.2%;
+    }
+
+    .channel .graph{
+        height: 213.4px;
+        border-radius: 10.6px;
+    }
+
+    .dashboard{
+        height: 355.7px;
+        border-radius: 10.6px;
+    }
+
 }
