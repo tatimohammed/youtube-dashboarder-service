@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()">
+    <input type="text" name="url" id="url" placeholder="Enter a video link for searching..." 
+        [(ngModel)]="videoUrl" required>
+    <input type="submit" value="Search" name="search" id="search">
+</form>
+
+<div class="dashboard">
+    <h1>{{truncateString(data.videoTitle, 50)}}</h1>
+    <div class="statistics">
+        <p><span>Total views</span><br>{{formatNumber(parseInt(data.viewCount))}}</p>
+        <p><span>Likes</span><br>{{formatNumber(parseInt(data.likeCount))}}</p>
+        <p><span>Comments</span><br>{{formatNumber(parseInt(data.commentCount))}}</p>
+        <p><span>Engagement Rate</span><br>{{data.engagementRate}} %</p>
+    </div>
+
+    <div class="channel">
+        <div class="graph" id="holder">
+            <canvas #radarChart></canvas>
+        </div>
+        <div class="channel-data" id="holder">
+            <p><span>Published At</span><br>{{data.publishedAt}}</p>
+            <p><span>Channel Name</span><br>{{truncateString(data.channelTitle, 31)}}</p>
+            <p><span>Most Popular Video</span><br><a href={{data.videoPopularLink}} target="_blank">{{truncateString(data.videoPopularTitle, 31)}}</a></p>
+        </div>
+    </div>
+
+</div>
